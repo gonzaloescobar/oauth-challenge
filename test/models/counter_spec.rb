@@ -53,4 +53,13 @@ describe 'counter' do
     
   end
 
+    it '"should omit dieresis marks so a = ä when input päpa"' do
+    @counter = Counter.new
+    
+    map = @counter.countCharacters("päpa")
+    expect(map["p"]).to eq 2
+    expect(map["a"]).to eq 2
+    
+  end
+
 end
