@@ -44,4 +44,13 @@ describe 'counter' do
 
   end
 
+    it '"should omit accent marks so a = á when input papá"' do
+    @counter = Counter.new
+    
+    map = @counter.countCharacters("papá")
+    expect(map["p"]).to eq 2
+    expect(map["a"]).to eq 2
+    
+  end
+
 end
