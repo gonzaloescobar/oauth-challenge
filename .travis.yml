@@ -4,4 +4,4 @@ rvm:
 bundler_args: --without development production
 before_script:
 - sh -e /etc/init.d/xvfb start
-script: bundle exec rake RAILS_ENV=test
+script: rspec ./test
