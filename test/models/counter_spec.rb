@@ -24,4 +24,14 @@ describe 'counter' do
     expect(map["o"]).to eq 1
   end
   
+  it '"should ignore ! symbol when input hi!"' do
+    @counter = Counter.new
+    
+    map = @counter.countCharacters("hi!")
+    expect(map["h"]).to eq 1
+    expect(map["i"]).to eq 1
+    expect(map["!"]).to eq nil
+
+  end
+
 end
